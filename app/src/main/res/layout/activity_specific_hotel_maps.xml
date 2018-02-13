@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="ifContentScrolls"
+    tools:context="com.example.user.gp_t1_xml.SpecificHotelMapsActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewHotelSelected"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+    <TextView
+        android:id="@+id/textViewHotelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewHotelSelected"
+        android:layout_alignStart="@+id/imageViewHotelSelected"
+        android:layout_below="@+id/imageViewHotelSelected"
+        android:text="Name"
+        android:textAlignment="center" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        tools:context="com.example.user.gp_t1_xml.SpecificHotelMapsActivity" />
+
+    <RatingBar
+        android:id="@+id/ratingBarHotelStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewHotelPrice"
+        android:layout_alignRight="@+id/textViewHotelPrice"
+        android:layout_below="@+id/textViewHotelPrice"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/textViewUserRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBarHotelStars"
+        android:layout_centerHorizontal="true"
+        android:text="Rate Us" />
+
+    <RatingBar
+        android:id="@+id/ratingBarUserRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingBarHotelStars"
+        android:layout_alignStart="@+id/ratingBarHotelStars"
+        android:layout_below="@+id/ratingBarHotelStars" />
+
+    <Button
+        android:id="@+id/buttonHotelBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBarUserRate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="14dp"
+        android:text="Book now" />
+</LinearLayout>
